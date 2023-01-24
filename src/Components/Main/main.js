@@ -2,7 +2,11 @@ import React from 'react';
 import { useParams } from 'react-router-dom';
 import './main.css';
 
-export default function main() {
+export default function Main() {
   const { red, green, blue } = useParams();
-  return <main></main>;
+  return (
+    <main style={{ backgroundColor: `rgb(${red}, ${green}, ${blue})` }}>
+      {`RGB(${red}, ${green}, ${blue})`}
+    </main>
+  );
 }
